@@ -51,9 +51,10 @@ const Body = () => {
                 {capturing ? (
                   <Spinner animation="border" role="status" />
                 ) : (
-                  <div className="camera-container">
-                    <div className="photo-container">
+                  <div className="camera-container-wrapper">
+                    <div className="camera-container">
                       <Webcam
+                        className="photo-container"
                         audio={false}
                         ref={webcamRef}
                         screenshotFormat="image/jpeg"
@@ -61,10 +62,10 @@ const Body = () => {
                           facingMode: "environment",
                         }}
                       />
+                      <Button variant="primary" onClick={capture}>
+                        Tomar foto
+                      </Button>
                     </div>
-                    <Button variant="primary" onClick={capture}>
-                      Tomar foto
-                    </Button>
                   </div>
                 )}
               </>
