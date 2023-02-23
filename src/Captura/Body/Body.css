@@ -4,7 +4,7 @@
   align-items: center;
   height: 100%;
   width: 100%;
-  max-height: calc(100vh - 30px);
+  max-height: calc(100vh - 5px);
 }
 .camera-container {
 display: flex;
@@ -14,5 +14,5 @@ justify-content: center;
 height: 100vh;
 }
 .tomar-foto {
-margin-top: 1%;
+margin-top: 0.2%;
 }
