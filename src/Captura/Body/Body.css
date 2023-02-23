@@ -1,21 +1,15 @@
-.photo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  max-height: calc(100vh - 175px);
-}
-.camera-container-wrapper {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .camera-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 50vh;
+  }
+  
+  .photo-container {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-}
-
+  height: 100%;
+  }
