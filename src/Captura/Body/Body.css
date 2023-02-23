@@ -1,9 +1,9 @@
 .photo-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   height: 100%;
-  width: auto;
+  width: 98%;
 }
 .camera-container {
 display: flex;
