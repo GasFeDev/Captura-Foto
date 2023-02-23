@@ -52,15 +52,16 @@ const Body = () => {
                   <Spinner animation="border" role="status" />
                 ) : (
                   <div className="camera-container">
-                    <Webcam
-                      className="photo-container"
-                      audio={false}
-                      ref={webcamRef}
-                      screenshotFormat="image/jpeg"
-                      videoConstraints={{
-                        facingMode: "environment",
-                      }}
-                    />
+                    <div className="photo-container">
+                      <Webcam
+                        audio={false}
+                        ref={webcamRef}
+                        screenshotFormat="image/jpeg"
+                        videoConstraints={{
+                          facingMode: "environment",
+                        }}
+                      />
+                    </div>
                     <Button variant="primary" onClick={capture}>
                       Tomar foto
                     </Button>
