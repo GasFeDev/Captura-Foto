@@ -1,0 +1,14 @@
+.photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-height: calc(100vh - 200px);
+  }
+  
+.textarea {
+    width: 100%;
+    padding: 1%;
+    resize: none;
+    margin-bottom: 1%;
+  }
