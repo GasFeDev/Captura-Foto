@@ -1,7 +1,8 @@
 .photo-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    margin-top: 2%;
     height: 100%;
     max-height: calc(100vh - 200px);
   }
