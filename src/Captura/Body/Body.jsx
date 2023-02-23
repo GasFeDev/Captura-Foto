@@ -61,7 +61,11 @@ const Body = () => {
                         facingMode: "environment",
                       }}
                     />
-                    <Button variant="primary" onClick={capture}>
+                    <Button
+                      className="tomar-foto"
+                      variant="primary"
+                      onClick={capture}
+                    >
                       Tomar foto
                     </Button>
                   </div>
