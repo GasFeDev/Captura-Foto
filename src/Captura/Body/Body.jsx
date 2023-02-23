@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Button, Spinner } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import Webcam from "react-webcam";
 import "./Body.css";
 
 const Body = () => {
   const [showTab2, setShowTab2] = useState(false);
-  const [capturing, setCapturing] = useState(false);
+  const [, setCapturing] = useState(false);
   const webcamRef = React.useRef(null);
   const [, setCaptured] = useState(false);
   const [imgSrc, setImgSrc] = useState(null);
@@ -42,35 +42,26 @@ const Body = () => {
         </Col>
       </Row>
       {showTab2 ? (
-        <div>
-          <div style={{ marginTop: "50px" }}>
-            {imgSrc ? (
-              <img src={imgSrc} alt="captured" />
-            ) : (
-              <>
-                {capturing ? (
-                  <Spinner animation="border" role="status" />
-                ) : (
-                  <div>
-                    <Webcam
-                      className="photo-container"
-                      audio={false}
-                      ref={webcamRef}
-                      screenshotFormat="image/jpeg"
-                      videoConstraints={{
-                        facingMode: "environment",
-                      }}
-                    />
-                    <Button variant="primary" onClick={capture}>
-                      Tomar foto
-                    </Button>
-                  </div>
-                )}
-              </>
-            )}
-          </div>
+        <div className="camera-container">
+          <Webcam
+            className="photo-container"
+            audio={false}
+            ref={webcamRef}
+            screenshotFormat="image/jpeg"
+            videoConstraints={{
+              facingMode: "environment",
+            }}
+          />
+          <Button variant="primary" onClick={capture}>
+            Tomar foto
+          </Button>
         </div>
-      ) : null}{" "}
+      ) : null}
+      {imgSrc && (
+        <div className="image-container">
+          <img src={imgSrc} alt="captured" />
+        </div>
+      )}
     </Container>
   );
 };
