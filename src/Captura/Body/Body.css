@@ -3,8 +3,7 @@
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  width: 100%;
-  max-height: calc(100vh - 1px);
+  width: auto;
 }
 .camera-container {
 display: flex;
