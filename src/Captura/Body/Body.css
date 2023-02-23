@@ -1,17 +1,18 @@
 .photo-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%;
-  }
-
-.camera-container {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+  max-height: calc(100vh - 30px);
+}
+.camera-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
 }
 .tomar-foto {
-  margin-top: 1%;
+margin-top: 1%;
 }
