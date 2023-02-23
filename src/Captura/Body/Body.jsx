@@ -27,7 +27,7 @@ const Body = () => {
   };
 
   return (
-    <Container className="mt-5 d-flex flex-column justify-content-center align-items-center">
+    <Container className="mt-5">
       <Row>
         <Col className="text-right">
           {showTab2 ? (
@@ -42,33 +42,35 @@ const Body = () => {
         </Col>
       </Row>
       {showTab2 ? (
-        <div style={{ marginTop: "20px" }}>
-          {imgSrc ? (
-            <img src={imgSrc} alt="captured" className="img-fluid" />
-          ) : (
-            <>
-              {capturing ? (
-                <Spinner animation="border" role="status" />
-              ) : (
-                <div className="camera-container d-flex justify-content-center align-items-center">
-                  <Webcam
-                    className="photo-container"
-                    audio={false}
-                    ref={webcamRef}
-                    screenshotFormat="image/jpeg"
-                    videoConstraints={{
-                      facingMode: "environment",
-                    }}
-                  />
-                  <Button variant="primary" onClick={capture}>
-                    Tomar foto
-                  </Button>
-                </div>
-              )}
-            </>
-          )}
+        <div>
+          <div style={{ marginTop: "20px" }}>
+            {imgSrc ? (
+              <img src={imgSrc} alt="captured" />
+            ) : (
+              <>
+                {capturing ? (
+                  <Spinner animation="border" role="status" />
+                ) : (
+                  <div className="camera-container">
+                    <Webcam
+                      className="photo-container"
+                      audio={false}
+                      ref={webcamRef}
+                      screenshotFormat="image/jpeg"
+                      videoConstraints={{
+                        facingMode: "environment",
+                      }}
+                    />
+                    <Button variant="primary" onClick={capture}>
+                      Tomar foto
+                    </Button>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
         </div>
-      ) : null}
+      ) : null}{" "}
     </Container>
   );
 };
